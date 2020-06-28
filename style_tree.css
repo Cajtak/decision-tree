@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+
+
+.node circle {
+    fill: #fff;
+    stroke: rgba(180, 70, 153, 0.863);
+    stroke-width: 1px;
+  }
+  
+.node text {
+    fill: slategray;
+    font: 12px Judah;
+    stroke-width: 1px;
+    font-size : 50px; 
+
+  }
+  
+.link {
+    fill: none;
+    stroke: rgba(190, 90, 165, 0.856);
+    stroke-width: 2px;
+  }
+
+
+
