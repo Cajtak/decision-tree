@@ -33,7 +33,7 @@ import category_encoders as ce
 from json_function import data_clean_missing, dicho_nominales, extract_date, dichotomisation, jsonFileTree, bbc_train_opti, results_models, eval_model
 
 class Model:
-    def __init__(self, datafile = "/Users/faigagaumand/Documents/Documents - MacBook Pro de Faiga/Data science/Compétition Kaggle/Quantmetry/data_énondé.csv"):
+    def __init__(self, datafile = "/Users/faigagaumand/Documents/D3JS_Project/data_énondé.csv"):
         self.df = pd.read_csv(datafile)
         self.clf = tree.DecisionTreeClassifier(max_depth=10)
         
