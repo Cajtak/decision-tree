@@ -42,7 +42,7 @@ class Model:
         self.df_dicho = dicho_nominales(self.df_clean, cols=['specialite','cheveux'])
         self.df_date = extract_date(self.df_dicho)
         self.df_dichotomisation = dichotomisation(self.df_dicho)
-        #self.df_scale = scale_data(self.df_dichotomisation)
+        self.df_scale = scale_data(self.df_dichotomisation)
         
     def split (self, test_size):
         X = self.df_dichotomisation.drop(["Unnamed: 0","index",'embauche'], axis=1)
