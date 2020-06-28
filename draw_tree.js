@@ -4,9 +4,9 @@ var file_name="projet_class.json"
 console.log("Hello")
 
 // Set the dimensions and margins of the diagram
-var margin = {top: 20, right: 100, bottom: 30, left: 200},
+var margin = {top: 40, right: 10, bottom: 20, left:100},
     width = 10000 - margin.left - margin.right,
-    height = 1000 - margin.top - margin.bottom;
+    height = 1200 - margin.top - margin.bottom;
 
 d3.json(file_name, function(error, data) {
           console.log(data)
@@ -131,10 +131,10 @@ d3.json(file_name, function(error, data) {
                         )
 
     text_percent_0 = nodeEnter.append("text")
-                        .attr("x",function(d) {return -13 + ((rectWidth - getTextWidth(d.data.name))/2) - 7})
+                        .attr("x",function(d) {return -13 +  ((rectWidth - getTextWidth(d.data.name))/2) - 7})
                         .attr("y", rectHeight*-4)
                         .attr("dy", ".35em")
-                        .attr("text-anchor", "middle" )
+                        .attr("text-anchor", "start" )
                         .style("font-size","10px")
                         .style("font-family","Judah")
                         .style("stroke","#b6232a")
