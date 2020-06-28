@@ -32,9 +32,6 @@ import category_encoders as ce
 
 from json_function import data_clean_missing, dicho_nominales, extract_date, dichotomisation, jsonFileTree, bbc_train_opti, results_models, eval_model
 
-#import data
-df = pd.read_csv('/Users/faigagaumand/Documents/Documents - MacBook Pro de Faiga/Data science/Compétition Kaggle/Quantmetry/data_énondé.csv')
-
 class Model:
     def __init__(self, datafile = "/Users/faigagaumand/Documents/Documents - MacBook Pro de Faiga/Data science/Compétition Kaggle/Quantmetry/data_énondé.csv"):
         self.df = pd.read_csv(datafile)
@@ -55,7 +52,7 @@ class Model:
     def fit(self):
         self.model = self.clf.fit(self.X_train, self.y_train)
     
-def getJsonFile(self): 
+    def getJsonFile(self): 
         self.features = self.X_test.columns
         self.label = 'embauche'
         self.labels_name = np.unique(self.df[self.label])
