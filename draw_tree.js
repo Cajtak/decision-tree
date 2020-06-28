@@ -162,8 +162,7 @@ d3.json(file_name, function(error, data) {
                         .text(function(d) {
                             const [v1,,v2] = d.data.pred.match(/\d+/g).map(v => parseInt(v))
                             return Math.round(v2 / (v1 + v2)*100,3) + '%'   
-                        },
-                        console.log(d.data.pred)
+                        }
                         )
                         
 
