@@ -37,7 +37,7 @@ class Model:
         self.df = pd.read_csv(datafile)
         self.clf = tree.DecisionTreeClassifier(max_depth=10)
         
-    def preprocess (self, df):
+    def preprocess (self):
         self.df_clean = data_clean_missing(self.df)
         self.df_dicho = dicho_nominales(self.df_clean, cols=['specialite','cheveux'])
         self.df_date = extract_date(self.df_dicho)
@@ -68,7 +68,7 @@ class Model:
         
 if __name__ == '__main__':
     model_instance= Model()
-    model_instance.preprocess(df)
+    model_instance.preprocess()
     model_instance.split(0.2)
     model_instance.fit()
     model_instance.getJsonFile()
